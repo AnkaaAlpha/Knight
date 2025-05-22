@@ -1,0 +1,7 @@
+---
+- name: Verifica connettivita' con i tuoi host
+  hosts: all  # O un gruppo specifico, o l'elenco dei tuoi 3 host
+  gather_facts: no
+  tasks:
+    - name: Esegui un ping per verificare la connettivita'
+      ansible.builtin.ping
