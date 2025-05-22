@@ -1,0 +1,6 @@
+# requirements.yml
+---
+roles:
+  - src: geerlingguy.nginx
+    # Puoi specificare una versione o un tag specifico se desideri, es:
+    # version: "6.0.0"
