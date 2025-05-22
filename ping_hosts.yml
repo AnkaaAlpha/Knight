@@ -4,4 +4,4 @@
   gather_facts: no
   tasks:
     - name: Esegui un ping per verificare la connettivita'
-      ansible.builtin.ping
+      ansible.builtin.ping:
