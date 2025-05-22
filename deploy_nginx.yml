@@ -1,0 +1,16 @@
+# deploy_nginx.yml
+---
+- name: Installa e configura Nginx usando il ruolo geerlingguy.nginx
+  hosts: webreverse # Assicurati che i tuoi 3 host siano in un gruppo chiamato 'webservers' nel tuo inventario AWX, oppure usa 'all' con un 'Limit'
+  become: yes       # Il ruolo Nginx ha bisogno dei permessi di root per installare software
+  roles:
+    - geerlingguy.nginx
+  # Puoi aggiungere variabili specifiche per il ruolo qui, ad esempio:
+  # vars:
+  #   nginx_install_from_source: false
+  #   nginx_sites:
+  #     default:
+  #       - listen 80
+  #       - server_name example.com
+  #       - root /var/www/html
+  #       - index index.html
